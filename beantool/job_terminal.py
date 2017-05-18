@@ -67,21 +67,21 @@ class JobTerminal(object):
             else:
                 param_phrase = ''
 
-            print(("# %10s %-20s %s" % 
-                  (command, param_phrase, description)))
+            print("# %10s %-20s %s" % 
+                  (command, param_phrase, description))
 
         print('')
 
     def __display_error(self, message):
-        print(("ERROR: %s\n" % (message)))
+        print("ERROR: %s\n" % (message))
 
     def run_loop(self):
         print('Job Terminal')
         print('============')
         print('')
-        print(("Job with ID (%d) has been reserved. You may manipulate it, "
+        print("Job with ID (%d) has been reserved. You may manipulate it, "
               "here." % 
-              (self.__j.jid)))
+              (self.__j.jid))
 
         self.__display_help()
 
@@ -160,7 +160,7 @@ class JobTerminal(object):
         print("Job touched.\n")
 
     def command_data(self):
-        print((self.__j.body))
+        print(self.__j.body)
         print('')
 
     def __decode_and_dump(self, data, key=None):
